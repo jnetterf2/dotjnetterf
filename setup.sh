@@ -20,7 +20,7 @@ read -p "Enter a clipboard github url (ALL HISTORY WILL BE REMOVED): " clipboard
 
 curl http://fishshell.com/files/2.2.0/fish-2.2.0.tar.gz > /tmp/fish.tar.gz
 cd /tmp
-tar -xf fish.tar.gz
+tar -xf fish.tar.gz || ln -s ./source.fish ./share/completions/..fish || true # Windows symlink sadface.
 
 # Setup fish
 cd ./fish-2.2.0
