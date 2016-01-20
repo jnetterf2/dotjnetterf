@@ -1,0 +1,17 @@
+#!/bin/sh
+function not_init {
+    echo $0: first run hsinit.sh
+    exit 1
+}
+
+cat ~/.config/jnetterf/etc/hscopy/reponame > /dev/null 2>&1 || not_init
+repo_url=`cat ~/.config/jnetterf/etc/hscopy/reponame`
+
+test "q$repo_url" != "q" || not_init;
+
+cd ~/.config/jnetterf/etc/hscopy/repo || not_init
+git reset --hard `git log --pretty=format:%H | tail -1` > /dev/null 2> /dev/null || git reset --hard `git log --pretty=format:%H | tail -1`
+cat > clipboard
+git add clipboard > /dev/null 2> /dev/null || git add clipboard
+git commit -m "clipping" > /dev/null 2> /dev/null || git commit -m "clipping"
+git push --force > /dev/null 2> /dev/null || git push

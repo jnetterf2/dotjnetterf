@@ -1,0 +1,19 @@
+#!/bin/sh
+function not_init {
+    echo $0: first run hsinit.sh
+    exit 1
+}
+
+cat ~/.config/jnetterf/etc/hscopy/reponame || not_init
+repo_url=`cat ~/.config/jnetterf/etc/hscopy/reponame`
+
+function not_init {
+    echo $0: first run hsinit.sh
+    exit 1
+}
+test "q$repo_url" != "q" || not_init;
+
+cd ~/.config/jnetterf/etc/hscopy/repo || not_init
+git fetch origin > /dev/null 2> /dev/null || git fetch origin
+git reset --hard origin/master > /dev/null 2> /dev/null || git reset --hard origin/master
+cat clipboard | perl -pe 'chomp if eof' --
