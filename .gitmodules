@@ -19,3 +19,6 @@
 [submodule "etc/vim/colors/distinguished"]
 	path = etc/vim/colors/distinguished
 	url = https://github.com/Lokaltog/vim-distinguished.git
+[submodule "etc/vim/bundle/ctrpl"]
+	path = etc/vim/bundle/ctrpl
+	url = https://github.com/kien/ctrlp.vim
