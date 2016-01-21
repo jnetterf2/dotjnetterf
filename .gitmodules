@@ -13,3 +13,6 @@
 [submodule "etc/vim/bundle/vim-unimpaired"]
 	path = etc/vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "etc/vim/bundle/vim-sensible"]
+	path = etc/vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
