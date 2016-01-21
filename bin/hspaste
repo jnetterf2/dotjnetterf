@@ -4,7 +4,7 @@ function not_init {
     exit 1
 }
 
-cat ~/.config/jnetterf/etc/hscopy/reponame || not_init
+cat ~/.config/jnetterf/etc/hscopy/reponame > /dev/null || not_init
 repo_url=`cat ~/.config/jnetterf/etc/hscopy/reponame`
 
 function not_init {
