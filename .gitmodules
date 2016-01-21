@@ -16,3 +16,6 @@
 [submodule "etc/vim/bundle/vim-sensible"]
 	path = etc/vim/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
+[submodule "etc/vim/colors/distinguished"]
+	path = etc/vim/colors/distinguished
+	url = https://github.com/Lokaltog/vim-distinguished.git
